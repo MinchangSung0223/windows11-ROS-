@@ -26,8 +26,43 @@ https://aka.ms/GetPCHealthCheckApp
  sudo apt-get update
  sudo apt-get install -y cuda-toolkit-11-4
  ```
- - nvidia-smi를 통해 확인
+ - nvidia-smi를 통해 설치 확인
  ```bash
  nvidia-smi
  ```
 ![image](https://user-images.githubusercontent.com/53217819/138554608-6c2fd592-0cb8-482e-80e7-b7f9c41bc1fc.png)
+
+4. wsl을 이용하여 docker 설치 ( root권한으로 진행 추천.)
+```bash
+curl https://get.docker.com | sh  
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+sudo apt-get update
+sudo apt-get install -y nvidia-docker2      
+sudo service docker stop
+sudo service docker start
+```
+5. wsl을 이용하여 Ros 설치
+ ```
+ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+ sudo apt install curl 
+ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+ sudo apt update
+sudo apt install ros-noetic-desktop-full
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+sudo apt install python3-rosdep
+sudo rosdep init
+rosdep update
+mkdir ~/catkin_ws/src
+cd ~/catkin_ws
+catkin_make
+echo "source ~/catkin_ws/devel/setup.sh" >> ~/.bashrc
+source ~/.bashrc
+
+
+ ```
+ 
+6. 
