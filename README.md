@@ -65,4 +65,9 @@ source ~/.bashrc
 
  ```
  
-6. 
++ Dynamixel SDK 설치
+```bash
+```
++ Poco 설치
+```bash
+```
