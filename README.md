@@ -16,6 +16,12 @@ https://aka.ms/GetPCHealthCheckApp
  - 설치 후 컴퓨터 재시작
  ![image](https://user-images.githubusercontent.com/53217819/138554486-2c628817-f8de-4d97-95eb-22afdb8c2ab9.png)
 
+
+ - powershell을 관리자 권한으로 열고
+  ```bash
+      wsl --install
+  ```
+
  - wsl 창을 열고 다음의 명령어를 입력하여 드라이버 설치
  ```bash
  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
