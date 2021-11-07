@@ -1,3 +1,7 @@
++ windows 10 최신업데이트버전 설치
+ https://github.com/AveYo/MediaCreationTool.bat
+
+
 1.windows 11설치
  - pc 상태검사 앱 다운로드 후 상태확인
 ```bash
