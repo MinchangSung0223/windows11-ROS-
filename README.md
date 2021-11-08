@@ -25,6 +25,12 @@ https://aka.ms/GetPCHealthCheckApp
   ```bash
       wsl --install
   ```
+  
+  - powershell을 관리자 권한으로 열고
+  ```bash
+      wsl --update
+  ```
+  
 
  - wsl 창을 열고 다음의 명령어를 입력하여 드라이버 설치
  ```bash
